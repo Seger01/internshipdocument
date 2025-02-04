@@ -6,7 +6,10 @@
 \usepackage{geometry} % To adjust margins
 \usepackage{tabularx} % For tables that auto-adjust to the page width
 \usepackage{longtable} % For tables across multiple pages
-
+\usepackage[ backend=biber, style=alphabetic, sorting=ynt
+]{biblatex} 
+\addbibresource{sample.bib}
+\addbibresource{sample.bib}
 \geometry{a4paper, margin=1in}
 
 \title{Plan of Attack}
@@ -94,27 +97,46 @@ Student number: 2171721
 
 \subsection{Organization}
 % Review: NOOOOOO I DON'T WANT TO READ THE SALES PITCH
+\textbf{Topic Embedded Systems}, founded in 1996, is a Dutch company
+specializing in embedded system development. With over 25 years of experience,
+the company offers a variety of services, including consultancy, project
+execution, and the development of System-On-Modules (SoMs) to accelerate product
+development.
 
-TOPIC Embedded Systems is a company with a no-nonsense attitude and a strong
-family-driven culture. Skilled technical consultants provide expertise in
-embedded software and digital hardware. Services include executing complete
-development projects either on-site or under in-house management from the office
-in Best.
+\paragraph{Services Offered} 
+\begin{itemize} 
+    \item \textbf{Consultancy:} Topic
+provides expert advice and remote consultancy to enhance clients' development
+teams. 
+\item \textbf{Farm Out:} Engineers from Topic are embedded directly into
+clients' development processes, offering hands-on support. 
+\item \textbf{Projects:} Topic manages in-house projects from design and development
+to production and market introduction. 
+\item \textbf{Products:} They develop and
+produce high-quality System-On-Modules that are scalable in performance and
+functionality. \end{itemize}
 
-TOPIC Healthcare Solutions focuses on clinical workflow optimization using
-advanced digital technologies. With over 25 years of experience, the embedded
-market and its challenges are well understood. A team of more than 100 engineers
-stands ready to support innovative product development with high-quality
-technical solutions.
+\paragraph{Expertise Areas} 
+\begin{itemize} 
+    \item \textbf{Software Development:}
+Topic engineers excel in embedded software, web application software, and cloud
+services. 
+\item \textbf{Board Development:} Specialization in electronic circuit
+development and Printed Circuit Board (PCB) production. 
+\item \textbf{FPGA Development:} Topic is a Xilinx Premium Partner, offering extensive knowledge in
+FPGA development. 
+\item \textbf{Math Modelling AI:} Expertise in math modeling
+facilitates the implementation of algorithms on embedded systems and accelerates
+such algorithms on embedded devices. 
+\end{itemize}
 
-Our daily expertise, embedded in your future.
 \subsection{Project}\label{project-background}
 
 %Review: This shouls not include the aim of the project just the background and history
 
 The Stewart platform development is a umbrella project to experiment with
-different embedded software and FPGA firmware implementation strategies. The aim
-is to test alternative implementation approaches, finding the balance between
+different embedded software and FPGA firmware implementation strategies. This project was started to 
+test alternative implementation approaches, finding the balance between
 implementation choice, design complexity, integration effort and cost. The
 development of the Stewart platform is driven by a series of graduation projects,
 increasing the (software) complexity step-by-step. The history of the project
@@ -147,13 +169,32 @@ skeleton VWC BSP to have multiple development kits collaborate. The user
 interface to interact with the devices runs over a webserver. Both functions
 shall be re-used when extending the demonstrator platform. \end{itemize}
 \subsection{Parties}
-%Review: This should be a more extensive list OR explanation of the parties involved.
 
-This project is being developed mostly by different interns combined with the input of the intern counselor and supporting employees.
+This project is developed and executed as a graduation internship assignment.
+The two primary parties involved in this project are:
+
+\begin{itemize} 
+    \item \textbf{Avans Hogeschool:} The educational institution
+providing the internship program. Avans Hogeschool is responsible for overseeing
+the interns' progress, providing educational support, and consulting on academic
+matters. Additionally, an educational consultant from Avans Hogeschool is
+involved to ensure that the internship aligns with the educational requirements
+and the students' learning outcomes. 
+\item \textbf{Topic Embedded Systems:} The
+company providing the internship assignment and the consultancy during the
+project. Topic Embedded Systems is responsible for offering the project topic,
+guidance, and technical consultancy. The company also evaluates the interns'
+progress, providing real-world experience in embedded systems development and
+professional development. 
+\end{itemize}
+
+
 
 
 \newpage
-%wouter
+%wouter 
+%TODO: goal should be different for both duo partners
+%TODO: finish this section
 \section{Project Result}
 
 
@@ -177,6 +218,7 @@ particularly through the built-in DMA module, to optimize data transfer.
 \subsection{Problem Definition} 
 %Review: formal english so no contractions like ball's and the entire sentence it is in does not read well because of the large amount of comma's
 %Review2: This entire subsection does not really include a problem definition, it is more of a continuation of the problem analysis or project ojective
+
 To enhance the current setup, this project will
 integrate a previously selected camera to detect the ball's position, speed, and
 direction, improving platform control. Additionally, the existing STM32-based
@@ -655,8 +697,28 @@ In this phase, the completed product is tested and validated to ensure that it m
 \newpage
 %wouter
 \section{Project Organization}
+\textbf{Project name}: Steward platform.\\
+\textbf{Project duration}: 20 weeks (03-02-2025 - 04-07-2025)\\
+\textbf{Stakeholders}: Topic Embedded Systems
+
 \subsection{Organization}
 \subsection{Roles and Personnel}
+\begin{center}\label{involved-party-table} 
+    \begin{tabular}{|c|c|c|} 
+        \hline
+        name & role description & contact \\ 
+        \hline 
+        Wouter Boerenkamps & developing intern & wrj.boerenkamps@student.avans.nl \\ 
+        \hline 
+        Seger Sars & developing intern & s.sars@student.avans.nl \\  
+        \hline 
+        Dirk van den Heuvel &
+        technical director & dirk.van.den.heuvel@topic.nl \\ 
+        \hline 
+        Britta Claes & intern manager & britta.claes@topic.nl \\ 
+        \hline 
+    \end{tabular}
+\end{center}
 \subsection{Information}
 
 
