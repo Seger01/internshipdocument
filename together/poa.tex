@@ -90,17 +90,96 @@ Student number: 2171721
 \newpage
 %wouter
 \section{Background}
+
 \subsection{Organization}
-\subsection{Project}
+TOPIC Embedded Systems is a company with a no-nonsense attitude and a strong
+family-driven culture. Skilled technical consultants provide expertise in
+embedded software and digital hardware. Services include executing complete
+development projects either on-site or under in-house management from the office
+in Best.
+
+TOPIC Healthcare Solutions focuses on clinical workflow optimization using
+advanced digital technologies. With over 25 years of experience, the embedded
+market and its challenges are well understood. A team of more than 100 engineers
+stands ready to support innovative product development with high-quality
+technical solutions.
+
+Our daily expertise, embedded in your future.
+\subsection{Project}\label{project-background}
+The Stewart platform development is a umbrella project to experiment with
+different embedded software and FPGA firmware implementation strategies. The aim
+is to test alternative implementation approaches, finding the balance between
+implementation choice, design complexity, integration effort and cost. The
+development of the Stewart platform is driven by a series of graduation projects,
+increasing the (software) complexity step-by-step. The history of the project
+can be summarized as: 
+\begin{itemize} 
+\item[] \textbf{Mitchell Broeren} Was
+responsible for creating the physical platform implementation: the mechanical
+aspects as well as the first driver implementation. He had to overcome all the
+aspects involved building a design from scratch. Delivered a working platform
+with some needs for improvement.
+\item[]\textbf{Chiel van de
+Camp} Improved the motor drive quality and processing model. Also introduced the
+touch-screen balance board as pressure sensor. Demonstrated that proper
+balancing act with the board and a ball was reliable possible. And also
+demonstrated that the pressure sensor may not be the most optimal choice.
+\item[]\textbf{Jesper Weijnen} Changed the inverse kinetic model implementation
+of the Stewart platform into a look-up table in the context of improving on
+latency of the control flow using the microcontroller. The idea of the balancing
+board was replaced by an object tracking implementation, where the platform
+should keep the object to track in the middle of the screen. Object recognition
+was introduced using a USB webcam on a PC\@. The experiment clearly illustrated
+that real-time video processing performance requires dedicated processing
+hardware, unless serious compromises are made or very application specific
+optimizations are considered. An experiment to get the video processing
+implemented in the FPGA using high-level-synthesis (C-code synthesis straight
+into FPGA logic) was also successful but could not be tested live due to a
+limitation in time. 
+\item[]\textbf{Stef van Stipdonk} Has created a specific
+skeleton VWC BSP to have multiple development kits collaborate. The user
+interface to interact with the devices runs over a webserver. Both functions
+shall be re-used when extending the demonstrator platform. \end{itemize}
 \subsection{Parties}
+This project is being developed mostly by different interns combined with the input of the intern counselor and supporting employees.
 
 
 \newpage
 %wouter
 \section{Project Result}
-\subsection{Problem Analysis}
-\subsection{Problem Definition}
+
+
+\subsection{Problem Analysis} As described in section \ref{project-background},
+the current version of the project is a functional Stewart platform that uses a
+touchpad sensor to determine the ball's position. The system is controlled by an
+STM32 microcontroller, which utilizes an inverse kinematics lookup table to
+operate the motors via motor drivers.
+
+However, the touchpad sensor introduces significant latency, which negatively
+impacts the system’s responsiveness and performance. This limitation affects the
+accuracy and real-time capabilities of the platform. Topic has researched the
+possibility of replacing the touchpad with a camera-based machine vision system
+to reduce latency and improve tracking precision.
+
+Additionally, there is a need to migrate the current demonstration setup from
+the STM32 microcontroller to the Miami Plus ZU9 board.
+the project will explore communication options between the CPU and the FPGA,
+particularly through the built-in DMA module, to optimize data transfer.
+
+\subsection{Problem Definition} To enhance the current setup, this project will
+integrate a previously selected camera to detect the ball's position, speed, and
+direction, improving platform control. Additionally, the existing STM32-based
+implementation is migrated to the Miami Plus ZU9 board. In this new
+configuration, the FPGA will serve as the primary controller for machine vision
+processing and as the interface between the board and the motor controllers.
+
+These functionalities must be integrated and managed by a custom
+Linux distribution, which will combine the various components and enable
+demonstration management via a web interface.
+
 \subsection{Objective}
+The Objective of this project is to gain more knoweldge about machine vision and motor control using the FPGA 
+and to improve the current setup to reduce latency and improve overal performance.
 \subsection{Final Result}
 
 
