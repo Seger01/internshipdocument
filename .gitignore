@@ -1,0 +1,57 @@
+# LaTeX intermediate and auxiliary files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.idx
+*.ind
+*.ilg
+*.synctex.gz
+*.synctex
+*.fdb_latexmk
+*.fls
+*.xdv
+
+# Editor-specific files
+*~
+*.bak
+*.swp
+*.swo
+
+# Output files
+*.pdf
+*.dvi
+*.ps
+*.eps
+
+# Glossary and bibliography files
+*.glg
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Overleaf and other cloud service files
+*.sync/
+*.synctex(busy)
+
+# Temporary files
+*.tmp
+*.nav
+*.snm
+*.vrb
+
+# Output directory for some LaTeX distributions
+_build/
+output/
