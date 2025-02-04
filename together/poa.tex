@@ -120,31 +120,31 @@ development of the Stewart platform is driven by a series of graduation projects
 increasing the (software) complexity step-by-step. The history of the project
 can be summarized as: 
 \begin{itemize} 
-\item[] \textbf{Mitchell Broeren} Was
-responsible for creating the physical platform implementation: the mechanical
-aspects as well as the first driver implementation. He had to overcome all the
-aspects involved building a design from scratch. Delivered a working platform
-with some needs for improvement.
-\item[]\textbf{Chiel van de
-Camp} Improved the motor drive quality and processing model. Also introduced the
-touch-screen balance board as pressure sensor. Demonstrated that proper
-balancing act with the board and a ball was reliable possible. And also
-demonstrated that the pressure sensor may not be the most optimal choice.
-\item[]\textbf{Jesper Weijnen} Changed the inverse kinetic model implementation
-of the Stewart platform into a look-up table in the context of improving on
-latency of the control flow using the microcontroller. The idea of the balancing
-board was replaced by an object tracking implementation, where the platform
-should keep the object to track in the middle of the screen. Object recognition
-was introduced using a USB webcam on a PC\@. The experiment clearly illustrated
-that real-time video processing performance requires dedicated processing
-hardware, unless serious compromises are made or very application specific
-optimizations are considered. An experiment to get the video processing
-implemented in the FPGA using high-level-synthesis (C-code synthesis straight
-into FPGA logic) was also successful but could not be tested live due to a
-limitation in time. 
-\item[]\textbf{Stef van Stipdonk} Has created a specific
-skeleton VWC BSP to have multiple development kits collaborate. The user
-interface to interact with the devices runs over a webserver. Both functions
+    \item[] \textbf{Mitchell Broeren} Was
+        responsible for creating the physical platform implementation: the mechanical
+        aspects as well as the first driver implementation. He had to overcome all the
+        aspects involved building a design from scratch. Delivered a working platform
+        with some needs for improvement.
+    \item[]\textbf{Chiel van de
+        Camp} Improved the motor drive quality and processing model. Also introduced the
+        touch-screen balance board as pressure sensor. Demonstrated that proper
+        balancing act with the board and a ball was reliable possible. And also
+        demonstrated that the pressure sensor may not be the most optimal choice.
+    \item[]\textbf{Jesper Weijnen} Changed the inverse kinetic model implementation
+        of the Stewart platform into a look-up table in the context of improving on
+        latency of the control flow using the microcontroller. The idea of the balancing
+        board was replaced by an object tracking implementation, where the platform
+        should keep the object to track in the middle of the screen. Object recognition
+        was introduced using a USB webcam on a PC\@. The experiment clearly illustrated
+        that real-time video processing performance requires dedicated processing
+        hardware, unless serious compromises are made or very application specific
+        optimizations are considered. An experiment to get the video processing
+        implemented in the FPGA using high-level-synthesis (C-code synthesis straight
+        into FPGA logic) was also successful but could not be tested live due to a
+        limitation in time. 
+    \item[]\textbf{Stef van Stipdonk} Has created a specific
+        skeleton VWC BSP to have multiple development kits collaborate. The user
+        interface to interact with the devices runs over a webserver. Both functions
 shall be re-used when extending the demonstrator platform. \end{itemize}
 \subsection{Parties}
 %Review: This should be a more extensive list OR explanation of the parties involved.
@@ -201,23 +201,6 @@ In each phase, a number of activities must be carried out, and each phase will p
 The planning and division of tasks for these activities is further explained in the Planning chapter.
 It is possible that different phases may overlap.
 
-% \subsection{Plan of Attack}
-% This is the initial phase of the project in which the plan for the entire project is formulated. It consists of an overview of the objectives, required resources, planning, and the approach that will be followed.
-%
-% \begin{itemize}[leftmargin=*, label={}]
-%     \item \textbf{Activities:}
-%     \begin{itemize}
-%         \item Familiarizing oneself with the project.
-%         \item Reviewing the work of previous interns and discussing it with the supervisor.
-%         \item Formulating the Action Plan.
-%     \end{itemize}
-%     \item \textbf{Results:}
-%     \begin{itemize}
-%         \item General knowledge about the project.
-%         \item Understanding of previous interns' work and their pitfalls.
-%         \item The fully formulated Action Plan.
-%     \end{itemize}
-% \end{itemize}
 \subsection{Plan of Attack}
 This is the foundational phase of the project, during which a comprehensive plan is formulated to ensure smooth execution.
 This phase includes understanding the project scope, identifying key challenges, defining objectives, and establishing a structured approach.
@@ -225,61 +208,55 @@ Effective planning at this stage minimizes risks and enhances project efficiency
 
 \begin{itemize}[leftmargin=*, label={}]
     \item \textbf{Activities:}
-    \begin{itemize}
-        \item \textbf{Project Familiarization:}
         \begin{itemize}
-            \item Studying project documentation, previous reports, and technical specifications.
-            \item Conducting background research on relevant technologies and methodologies.
-            \item Understanding the expectations and deliverables from project stakeholders.
+            \item \textbf{Project Familiarization:}
+                \begin{itemize}
+                    \item Studying project documentation, previous reports, and technical specifications.
+                    \item Conducting background research on relevant technologies and methodologies.
+                    \item Understanding the expectations and deliverables from project stakeholders.
+                \end{itemize}
+            \item \textbf{Engagement with Prior Work:}
+                \begin{itemize}
+                    \item Reviewing the work of previous interns and team members.
+                    \item Analyzing past implementations, successes, and failures.
+                    \item Consulting the supervisor and senior members for insights and best practices.
+                \end{itemize}
+            \item \textbf{Formulating the Action Plan:}
+                \begin{itemize}
+                    \item Defining clear, measurable objectives and milestones.
+                    \item Identifying dependencies, constraints, and possible risks.
+                    \item Determining an initial timeline and key deadlines.
+                    \item Establishing a methodology for project execution.
+                    \item Setting up tools for task tracking, version control, and documentation.
+                \end{itemize}
+            \item \textbf{Risk Assessment and Contingency Planning:}
+                \begin{itemize}
+                    \item Identifying potential challenges and roadblocks.
+                    \item Developing contingency plans for anticipated issues.
+                    \item Establishing fallback strategies for missed deadlines or unexpected hurdles.
+                \end{itemize}
         \end{itemize}
-        \item \textbf{Engagement with Prior Work:}
-        \begin{itemize}
-            \item Reviewing the work of previous interns and team members.
-            \item Analyzing past implementations, successes, and failures.
-            \item Consulting the supervisor and senior members for insights and best practices.
-        \end{itemize}
-        \item \textbf{Formulating the Action Plan:}
-        \begin{itemize}
-            \item Defining clear, measurable objectives and milestones.
-            \item Identifying dependencies, constraints, and possible risks.
-            \item Determining an initial timeline and key deadlines.
-            \item Establishing a methodology for project execution.
-            \item Setting up tools for task tracking, version control, and documentation.
-        \end{itemize}
-        \item \textbf{Risk Assessment and Contingency Planning:}
-        \begin{itemize}
-            \item Identifying potential challenges and roadblocks.
-            \item Developing contingency plans for anticipated issues.
-            \item Establishing fallback strategies for missed deadlines or unexpected hurdles.
-        \end{itemize}
-    \end{itemize}
-    
+
     \item \textbf{Results:}
-    \begin{itemize}
-        \item \textbf{Thorough Understanding of the Project:}
         \begin{itemize}
-            \item Clear knowledge of project goals, deliverables, and success criteria.
-            \item Familiarity with technical aspects, tools, and methodologies required.
-            \item Awareness of Topic standards and best practices.
+            \item \textbf{Thorough Understanding of the Project:}
+                \begin{itemize}
+                    \item Clear knowledge of project goals, deliverables, and success criteria.
+                    \item Familiarity with technical aspects, tools, and methodologies required.
+                    \item Awareness of Topic standards and best practices.
+                \end{itemize}
+            \item \textbf{Comprehensive Action Plan:}
+                \begin{itemize}
+                    \item Well-defined objectives, timelines, and milestones.
+                    \item Risk assessment strategies.
+                    \item A structured workflow and clearly assigned responsibilities.
+                \end{itemize}
+            \item \textbf{Increased Readiness for Implementation:}
+                \begin{itemize}
+                    \item Clear roadmap ensuring a structured project progression.
+                    \item Effective coordination mechanisms in place.
+                \end{itemize}
         \end{itemize}
-        %REVIEW: remove
-        \item \textbf{Lessons Learned from Previous Work:}
-        \begin{itemize}
-            \item Understanding past achievements and shortcomings.
-            \item Identification of areas for improvement and innovation.
-        \end{itemize}
-        \item \textbf{Comprehensive Action Plan:}
-        \begin{itemize}
-            \item Well-defined objectives, timelines, and milestones.
-            \item Risk assessment strategies.
-            \item A structured workflow and clearly assigned responsibilities.
-        \end{itemize}
-        \item \textbf{Increased Readiness for Implementation:}
-        \begin{itemize}
-            \item Clear roadmap ensuring a structured project progression.
-            \item Effective coordination mechanisms in place.
-        \end{itemize}
-    \end{itemize}
 \end{itemize}
 
 
@@ -288,61 +265,61 @@ In this phase, the functional and technical requirements of the project are thor
 
 \begin{itemize}[leftmargin=*, label={}]
     \item \textbf{Activities:}
-    \begin{itemize}
-        \item \textbf{Understanding the Project Scope:}
         \begin{itemize}
-            \item Reviewing initial project documentation and relevant materials.
-            \item Identifying the key objectives and expected outcomes.
-            \item Understanding any constraints (budget, time, technical limitations).
+            \item \textbf{Understanding the Project Scope:}
+                \begin{itemize}
+                    \item Reviewing initial project documentation and relevant materials.
+                    \item Identifying the key objectives and expected outcomes.
+                    \item Understanding any constraints (budget, time, technical limitations).
+                \end{itemize}
+            \item \textbf{Analyzing the Current System and Architecture:}
+                \begin{itemize}
+                    \item Reviewing the current state and architecture of existing software.
+                    \item Identifying system dependencies and interactions.
+                \end{itemize}
+            \item \textbf{Defining Functional Requirements:}
+                \begin{itemize}
+                    \item Establishing what the final product must be able to do.
+                    \item Breaking down features into core functionalities and optional enhancements.
+                    \item Categorizing requirements using the MoSCoW method (Must-Have, Should-Have, Could-Have, Won't-Have).
+                \end{itemize}
+            \item \textbf{Defining Technical Requirements:}
+                \begin{itemize}
+                    \item Specifying required programming languages, frameworks, and technologies.
+                    \item Establishing compatibility requirements with existing infrastructure.
+                \end{itemize}
+            \item \textbf{Formulating Measurable Requirements:}
+                \begin{itemize}
+                    \item Ensuring requirements meet the SMART (Specific, Measurable, Acceptable, Realistic, and Time-bound) criteria.
+                \end{itemize}
+            \item \textbf{Documenting the Requirements:}
+                \begin{itemize}
+                    \item Compiling all requirements into a formal requirements specification document.
+                    \item Conducting reviews and revisions with stakeholders.
+                \end{itemize}
         \end{itemize}
-        \item \textbf{Analyzing the Current System and Architecture:}
-        \begin{itemize}
-            \item Reviewing the current state and architecture of existing software.
-            \item Identifying system dependencies and interactions.
-        \end{itemize}
-        \item \textbf{Defining Functional Requirements:}
-        \begin{itemize}
-            \item Establishing what the final product must be able to do.
-            \item Breaking down features into core functionalities and optional enhancements.
-            \item Categorizing requirements using the MoSCoW method (Must-Have, Should-Have, Could-Have, Won't-Have).
-        \end{itemize}
-        \item \textbf{Defining Technical Requirements:}
-        \begin{itemize}
-            \item Specifying required programming languages, frameworks, and technologies.
-            \item Establishing compatibility requirements with existing infrastructure.
-        \end{itemize}
-        \item \textbf{Formulating Measurable Requirements:}
-        \begin{itemize}
-            \item Ensuring requirements meet the SMART (Specific, Measurable, Acceptable, Realistic, and Time-bound) criteria.
-        \end{itemize}
-        \item \textbf{Documenting the Requirements:}
-        \begin{itemize}
-            \item Compiling all requirements into a formal requirements specification document.
-            \item Conducting reviews and revisions with stakeholders.
-        \end{itemize}
-    \end{itemize}
 
     \item \textbf{Results:}
-    \begin{itemize}
-        \item \textbf{Comprehensive Functional Requirements:}
         \begin{itemize}
-            \item Well-defined and categorized functionalities.
-            \item Prioritized using the MoSCoW method for structured development.
+            \item \textbf{Comprehensive Functional Requirements:}
+                \begin{itemize}
+                    \item Well-defined and categorized functionalities.
+                    \item Prioritized using the MoSCoW method for structured development.
+                \end{itemize}
+            \item \textbf{Robust Technical Requirements:}
+                \begin{itemize}
+                    \item Defined system constraints.
+                    \item Clearly outlined integration points.
+                    \item Established development tools, frameworks, and infrastructure needs.
+                \end{itemize}
+            \item \textbf{Requirements Following SMART Criteria}
+            \item \textbf{Finalized and Reviewed Requirements Document:}
+                \begin{itemize}
+                    \item Approved and validated by key stakeholders.
+                    \item Maintained for reference throughout the project lifecycle.
+                    \item Forms the foundation for future design and development decisions.
+                \end{itemize}
         \end{itemize}
-        \item \textbf{Robust Technical Requirements:}
-        \begin{itemize}
-            \item Defined system constraints.
-            \item Clearly outlined integration points.
-            \item Established development tools, frameworks, and infrastructure needs.
-        \end{itemize}
-        \item \textbf{Requirements Following SMART Criteria}
-        \item \textbf{Finalized and Reviewed Requirements Document:}
-        \begin{itemize}
-            \item Approved and validated by key stakeholders.
-            \item Maintained for reference throughout the project lifecycle.
-            \item Forms the foundation for future design and development decisions.
-        \end{itemize}
-    \end{itemize}
 \end{itemize}
 
 \subsection{Research Log}
@@ -350,62 +327,62 @@ In this phase, research is conducted on various unknown subjects relevant to the
 
 \begin{itemize}[leftmargin=*, label={}]
     \item \textbf{Activities:}
-    \begin{itemize}
-        \item \textbf{Identifying Knowledge Gaps:}
         \begin{itemize}
-            \item Listing all concepts, technologies, and methodologies that require further understanding.
-            \item Defining key research questions to guide the study.
+            \item \textbf{Identifying Knowledge Gaps:}
+                \begin{itemize}
+                    \item Listing all concepts, technologies, and methodologies that require further understanding.
+                    \item Defining key research questions to guide the study.
+                \end{itemize}
+            \item \textbf{Reviewing Existing Work:}
+                \begin{itemize}
+                    \item Analyzing documents and reports from previous interns.
+                    \item Extracting valuable insights from prior work.
+                \end{itemize}
+            \item \textbf{Consulting Experts and Supervisors:}
+                \begin{itemize}
+                    \item Engaging in discussions with supervisors and experienced team members.
+                    \item Asking specific, targeted questions to clarify technical details.
+                \end{itemize}
+            \item \textbf{Online and Literature Research:}
+                \begin{itemize}
+                    \item Searching the internet for relevant standards and technical papers. 
+                \end{itemize}
+            \item \textbf{Performing Practical Experiments and Prototyping:}
+                \begin{itemize}
+                    \item Testing small-scale implementations to verify theoretical concepts.
+                \end{itemize}
+            \item \textbf{Structuring and Documenting Research Findings:}
+                \begin{itemize}
+                    \item Keeping a well-organized research log with detailed notes.
+                    \item Maintaining a bibliography of all sources consulted for future reference.
+                \end{itemize}
         \end{itemize}
-        \item \textbf{Reviewing Existing Work:}
-        \begin{itemize}
-            \item Analyzing documents and reports from previous interns.
-            \item Extracting valuable insights from prior work.
-        \end{itemize}
-        \item \textbf{Consulting Experts and Supervisors:}
-        \begin{itemize}
-            \item Engaging in discussions with supervisors and experienced team members.
-            \item Asking specific, targeted questions to clarify technical details.
-        \end{itemize}
-        \item \textbf{Online and Literature Research:}
-        \begin{itemize}
-            \item Searching the internet for relevant standards and technical papers. 
-        \end{itemize}
-        \item \textbf{Performing Practical Experiments and Prototyping:}
-        \begin{itemize}
-            \item Testing small-scale implementations to verify theoretical concepts.
-        \end{itemize}
-        \item \textbf{Structuring and Documenting Research Findings:}
-        \begin{itemize}
-            \item Keeping a well-organized research log with detailed notes.
-            \item Maintaining a bibliography of all sources consulted for future reference.
-        \end{itemize}
-    \end{itemize}
 
     \item \textbf{Results:}
-    \begin{itemize}
-        \item \textbf{Comprehensive Research Log:}
         \begin{itemize}
-            \item A structured document covering most previously unknown topics.
-            \item Clearly written explanations and justifications for all findings.
-            \item Logical organization for easy reference during project execution.
+            \item \textbf{Comprehensive Research Log:}
+                \begin{itemize}
+                    \item A structured document covering most previously unknown topics.
+                    \item Clearly written explanations and justifications for all findings.
+                    \item Logical organization for easy reference during project execution.
+                \end{itemize}
+            \item \textbf{Resolved Knowledge Gaps:}
+                \begin{itemize}
+                    \item All critical uncertainties addressed and understood.
+                    \item Documented solutions to previously unclear aspects of the project.
+                \end{itemize}
+            \item \textbf{Validated Theoretical Concepts:}
+                \begin{itemize}
+                    \item Experimental findings supporting or refuting theoretical assumptions.
+                    \item A well-informed approach for implementation.
+                \end{itemize}
+            \item \textbf{Enhanced Decision-Making Ability:}
+                \begin{itemize}
+                    \item Clear guidelines on best practices and recommended approaches.
+                    \item Improved confidence in choosing appropriate tools and techniques.
+                    \item Reduced risk of unforeseen challenges due to incomplete knowledge.
+                \end{itemize}
         \end{itemize}
-        \item \textbf{Resolved Knowledge Gaps:}
-        \begin{itemize}
-            \item All critical uncertainties addressed and understood.
-            \item Documented solutions to previously unclear aspects of the project.
-        \end{itemize}
-        \item \textbf{Validated Theoretical Concepts:}
-        \begin{itemize}
-            \item Experimental findings supporting or refuting theoretical assumptions.
-            \item A well-informed approach for implementation.
-        \end{itemize}
-        \item \textbf{Enhanced Decision-Making Ability:}
-        \begin{itemize}
-            \item Clear guidelines on best practices and recommended approaches.
-            \item Improved confidence in choosing appropriate tools and techniques.
-            \item Reduced risk of unforeseen challenges due to incomplete knowledge.
-        \end{itemize}
-    \end{itemize}
 \end{itemize}
 
 
@@ -416,61 +393,61 @@ The goal is to create a clear blueprint that guides implementation while minimiz
 
 \begin{itemize}[leftmargin=*, label={}]
     \item \textbf{Activities:}
-    \begin{itemize}
-        \item \textbf{Understanding Stakeholder Expectations:}
         \begin{itemize}
-            \item Interviewing the supervisor to understand their architectural vision.
-            \item Gathering feedback from stakeholders on usability and functionality needs.
-            \item Analyzing potential trade-offs between different design choices.
+            \item \textbf{Understanding Stakeholder Expectations:}
+                \begin{itemize}
+                    \item Interviewing the supervisor to understand their architectural vision.
+                    \item Gathering feedback from stakeholders on usability and functionality needs.
+                    \item Analyzing potential trade-offs between different design choices.
+                \end{itemize}
+            \item \textbf{Defining System Architecture:}
+                \begin{itemize}
+                    \item Identifying core components and their interactions.
+                    \item Defining APIs, data flows, and communication protocols.
+                    \item Ensuring scalability, maintainability, and extensibility in design choices.
+                \end{itemize}
+            \item \textbf{Technology and Tool Selection:}
+                \begin{itemize}
+                    \item Evaluating different programming languages, frameworks, and libraries.
+                    \item Considering performance and compatibility with existing systems.
+                \end{itemize}
+            \item \textbf{Creating Detailed Design Documents:}
+                \begin{itemize}
+                    \item Developing system diagrams, including:
+                        \begin{itemize}
+                            \item High-level architecture diagrams.
+                            \item Data flow diagrams and sequence diagrams.
+                        \end{itemize}
+                    \item Writing detailed design specifications for each system component.
+                \end{itemize}
+            \item \textbf{Reviewing and Refining the Design:}
+                \begin{itemize}
+                    \item Conducting design reviews with peers and supervisors.
+                    \item Iterating based on feedback to improve clarity and feasibility.
+                    \item Ensuring all design decisions are well-documented and justified.
+                \end{itemize}
         \end{itemize}
-        \item \textbf{Defining System Architecture:}
-        \begin{itemize}
-            \item Identifying core components and their interactions.
-            \item Defining APIs, data flows, and communication protocols.
-            \item Ensuring scalability, maintainability, and extensibility in design choices.
-        \end{itemize}
-        \item \textbf{Technology and Tool Selection:}
-        \begin{itemize}
-            \item Evaluating different programming languages, frameworks, and libraries.
-            \item Considering performance and compatibility with existing systems.
-        \end{itemize}
-        \item \textbf{Creating Detailed Design Documents:}
-        \begin{itemize}
-            \item Developing system diagrams, including:
-            \begin{itemize}
-                \item High-level architecture diagrams.
-                \item Data flow diagrams and sequence diagrams.
-            \end{itemize}
-            \item Writing detailed design specifications for each system component.
-        \end{itemize}
-        \item \textbf{Reviewing and Refining the Design:}
-        \begin{itemize}
-            \item Conducting design reviews with peers and supervisors.
-            \item Iterating based on feedback to improve clarity and feasibility.
-            \item Ensuring all design decisions are well-documented and justified.
-        \end{itemize}
-    \end{itemize}
 
     \item \textbf{Results:}
-    \begin{itemize}
-        \item \textbf{Comprehensive System Architecture:}
         \begin{itemize}
-            \item Clearly defined components and their interactions.
-            \item Optimized APIs and communication protocols.
+            \item \textbf{Comprehensive System Architecture:}
+                \begin{itemize}
+                    \item Clearly defined components and their interactions.
+                    \item Optimized APIs and communication protocols.
+                \end{itemize}
+            \item \textbf{Well-Documented Design Specification:}
+                \begin{itemize}
+                    \item A formalized design document containing all architectural decisions.
+                    \item Visual representations (diagrams, flowcharts) of the system's structure.
+                    \item Justifications for every major design choice.
+                \end{itemize}
+            \item \textbf{Approval and Readiness for Implementation:}
+                \begin{itemize}
+                    \item Finalized and validated design document.
+                    \item Supervisor and stakeholder approval obtained.
+                    \item Clear roadmap for transitioning to the implementation phase.
+                \end{itemize}
         \end{itemize}
-        \item \textbf{Well-Documented Design Specification:}
-        \begin{itemize}
-            \item A formalized design document containing all architectural decisions.
-            \item Visual representations (diagrams, flowcharts) of the system's structure.
-            \item Justifications for every major design choice.
-        \end{itemize}
-        \item \textbf{Approval and Readiness for Implementation:}
-        \begin{itemize}
-            \item Finalized and validated design document.
-            \item Supervisor and stakeholder approval obtained.
-            \item Clear roadmap for transitioning to the implementation phase.
-        \end{itemize}
-    \end{itemize}
 \end{itemize}
 
 \subsection{Product}
@@ -478,51 +455,51 @@ This is the phase in which the actual development and construction of the projec
 
 \begin{itemize}[leftmargin=*, label={}]
     \item \textbf{Activities:}
-    \begin{itemize}
-        \item \textbf{Implementation of Core Components:}
         \begin{itemize}
-            \item Developing the main functionalities as outlined in the design specifications.
-            \item Writing clean, modular, and well-documented code.
+            \item \textbf{Implementation of Core Components:}
+                \begin{itemize}
+                    \item Developing the main functionalities as outlined in the design specifications.
+                    \item Writing clean, modular, and well-documented code.
+                \end{itemize}
+            \item \textbf{Integration of System Components:}
+                \begin{itemize}
+                    \item Combining individual modules into a cohesive system.
+                    \item Testing interfaces and interactions between components.
+                    \item Resolving integration issues and ensuring seamless communication.
+                \end{itemize}
+            \item \textbf{Iterative Development and Testing:}
+                \begin{itemize}
+                    \item Conducting unit tests and integration tests during development.
+                    \item Refactoring code to improve performance and maintainability.
+                \end{itemize}
+            \item \textbf{Including Optional Features:}
+                \begin{itemize}
+                    \item If the project progresses ahead of schedule, implementing "Could-Have" requirements.
+                \end{itemize}
+            \item \textbf{Documentation and Version Control:}
+                \begin{itemize}
+                    \item Maintaining detailed documentation of the system during development (architecture and design).
+                    \item Using version control systems to track changes.
+                \end{itemize}
         \end{itemize}
-        \item \textbf{Integration of System Components:}
-        \begin{itemize}
-            \item Combining individual modules into a cohesive system.
-            \item Testing interfaces and interactions between components.
-            \item Resolving integration issues and ensuring seamless communication.
-        \end{itemize}
-        \item \textbf{Iterative Development and Testing:}
-        \begin{itemize}
-            \item Conducting unit tests and integration tests during development.
-            \item Refactoring code to improve performance and maintainability.
-        \end{itemize}
-        \item \textbf{Including Optional Features:}
-        \begin{itemize}
-            \item If the project progresses ahead of schedule, implementing "Could-Have" requirements.
-        \end{itemize}
-        \item \textbf{Documentation and Version Control:}
-        \begin{itemize}
-            \item Maintaining detailed documentation of the system during development (architecture and design).
-            \item Using version control systems to track changes.
-        \end{itemize}
-    \end{itemize}
 
     \item \textbf{Results:}
-    \begin{itemize}
-        \item \textbf{Fully Functional Product:}
         \begin{itemize}
-            \item A working product that meets all specified requirements.
-            \item Core functionalities implemented and tested.
+            \item \textbf{Fully Functional Product:}
+                \begin{itemize}
+                    \item A working product that meets all specified requirements.
+                    \item Core functionalities implemented and tested.
+                \end{itemize}
+            \item \textbf{Optional Features (if applicable):}
+                \begin{itemize}
+                    \item Additional features included to enhance the product.
+                \end{itemize}
+            \item \textbf{Comprehensive Documentation:}
+                \begin{itemize}
+                    \item Detailed records of the development process, including code and design justifications.
+                    \item Version control logs for traceability and collaboration.
+                \end{itemize}
         \end{itemize}
-        \item \textbf{Optional Features (if applicable):}
-        \begin{itemize}
-            \item Additional features included to enhance the product.
-        \end{itemize}
-        \item \textbf{Comprehensive Documentation:}
-        \begin{itemize}
-            \item Detailed records of the development process, including code and design justifications.
-            \item Version control logs for traceability and collaboration.
-        \end{itemize}
-    \end{itemize}
 \end{itemize}
 
 \subsection{Qualification}
@@ -530,59 +507,59 @@ In this phase, the completed product is tested and validated to ensure that it m
 
 \begin{itemize}[leftmargin=*, label={}]
     \item \textbf{Activities:}
-    \begin{itemize}
-        \item \textbf{Developing Test Plans:}
         \begin{itemize}
-            \item Creating detailed test cases based on functional and technical requirements.
-            \item Defining acceptance criteria for each test case.
-            \item Ensuring test coverage for all critical functionalities.
+            \item \textbf{Developing Test Plans:}
+                \begin{itemize}
+                    \item Creating detailed test cases based on functional and technical requirements.
+                    \item Defining acceptance criteria for each test case.
+                    \item Ensuring test coverage for all critical functionalities.
+                \end{itemize}
+            \item \textbf{Executing System Tests:}
+                \begin{itemize}
+                    \item Conducting functional tests to verify that the product behaves as expected.
+                    \item Performing performance tests to evaluate system responsiveness and stability.
+                    \item Running stress tests to identify breaking points and limitations.
+                \end{itemize}
+            \item \textbf{Comparing Functionality with Requirements:}
+                \begin{itemize}
+                    \item Validating that the product meets all "Must-Have" and "Should-Have" requirements.
+                    \item Ensuring compliance with technical specifications and constraints.
+                \end{itemize}
+            \item \textbf{Reporting on Test Results:}
+                \begin{itemize}
+                    \item Documenting test outcomes, including pass/fail status and identified issues.
+                    \item Providing detailed reports to stakeholders for review and feedback.
+                \end{itemize}
+            \item \textbf{Addressing Defects and Issues:}
+                \begin{itemize}
+                    \item Fixing bugs and resolving issues identified during testing.
+                    \item Retesting to confirm that fixes are effective and do not introduce new problems.
+                \end{itemize}
+            \item \textbf{Final Validation and Approval:}
+                \begin{itemize}
+                    \item Conducting a final review with stakeholders to confirm product readiness.
+                    \item Obtaining formal approval for deployment or delivery.
+                \end{itemize}
         \end{itemize}
-        \item \textbf{Executing System Tests:}
-        \begin{itemize}
-            \item Conducting functional tests to verify that the product behaves as expected.
-            \item Performing performance tests to evaluate system responsiveness and stability.
-            \item Running stress tests to identify breaking points and limitations.
-        \end{itemize}
-        \item \textbf{Comparing Functionality with Requirements:}
-        \begin{itemize}
-            \item Validating that the product meets all "Must-Have" and "Should-Have" requirements.
-            \item Ensuring compliance with technical specifications and constraints.
-        \end{itemize}
-        \item \textbf{Reporting on Test Results:}
-        \begin{itemize}
-            \item Documenting test outcomes, including pass/fail status and identified issues.
-            \item Providing detailed reports to stakeholders for review and feedback.
-        \end{itemize}
-        \item \textbf{Addressing Defects and Issues:}
-        \begin{itemize}
-            \item Fixing bugs and resolving issues identified during testing.
-            \item Retesting to confirm that fixes are effective and do not introduce new problems.
-        \end{itemize}
-        \item \textbf{Final Validation and Approval:}
-        \begin{itemize}
-            \item Conducting a final review with stakeholders to confirm product readiness.
-            \item Obtaining formal approval for deployment or delivery.
-        \end{itemize}
-    \end{itemize}
 
     \item \textbf{Results:}
-    \begin{itemize}
-        \item \textbf{Final Test Report:}
         \begin{itemize}
-            \item All test cases executed and documented.
-            \item Clear evidence of product functionality and performance.
-            \item Recommendations for further improvements or enhancements.
+            \item \textbf{Final Test Report:}
+                \begin{itemize}
+                    \item All test cases executed and documented.
+                    \item Clear evidence of product functionality and performance.
+                    \item Recommendations for further improvements or enhancements.
+                \end{itemize}
+            \item \textbf{Defect Reports and Resolutions:}
+                \begin{itemize}
+                    \item Detailed records of identified issues and their resolutions.
+                \end{itemize}
+            \item \textbf{Validated and Approved Product:}
+                \begin{itemize}
+                    \item A fully tested and validated product.
+                    \item Stakeholder approval confirming that the product meets all requirements.
+                \end{itemize}
         \end{itemize}
-        \item \textbf{Defect Reports and Resolutions:}
-        \begin{itemize}
-            \item Detailed records of identified issues and their resolutions.
-        \end{itemize}
-        \item \textbf{Validated and Approved Product:}
-        \begin{itemize}
-            \item A fully tested and validated product.
-            \item Stakeholder approval confirming that the product meets all requirements.
-        \end{itemize}
-    \end{itemize}
 \end{itemize}
 
 \newpage
@@ -612,11 +589,11 @@ Deadlines in \textbf{bold} are mandated by school, all other deadlines are set b
 Unless a specific day and/or time is specified, all deadlines are on friday, 17:00.
 \begin{longtable}{|l|p{0.4\textwidth}|p{0.4\textwidth}|}
     \hline
-    \textbf{Week number} & \textbf{Activity}                         & \textbf{Deadlines}                      \\ \hline
+    \textbf{Week} & \textbf{Activity}                         & \textbf{Deadlines}                      \\ \hline
     \endfirsthead
 
     \hline
-    \textbf{Week number} & \textbf{Activity}                         & \textbf{Deadlines}                      \\ \hline
+    \textbf{Week} & \textbf{Activity}                         & \textbf{Deadlines}                      \\ \hline
     \endhead
 
     \hline \multicolumn{3}{r}{\textit{Continued on the next page}}                                             \\ \hline
@@ -625,26 +602,28 @@ Unless a specific day and/or time is specified, all deadlines are on friday, 17:
     \hline
     \endlastfoot
 
-    1   & TBD & TBD \\ \hline
-    2   & TBD & TBD \\ \hline
-    3   & TBD & TBD \\ \hline
-    4   & TBD & TBD \\ \hline
-    5   & TBD & TBD \\ \hline
-    6   & TBD & TBD \\ \hline
-    7   & TBD & TBD \\ \hline
-    8   & TBD & TBD \\ \hline
-    9   & TBD & TBD \\ \hline
-    10  & TBD & TBD \\ \hline
-    11  & TBD & TBD \\ \hline
-    12  & TBD & TBD \\ \hline
-    13  & TBD & TBD \\ \hline
-    14  & TBD & TBD \\ \hline
-    15  & TBD & TBD \\ \hline
-    16  & TBD & TBD \\ \hline
-    17  & TBD & TBD \\ \hline
-    18  & TBD & TBD \\ \hline
-    19  & TBD & TBD \\ \hline
-    20  & TBD & TBD \\ \hline
+    1 (3-2-2025)  & Get to know the company, work on PoA and plan first meeting with academic supervisor & TBD \\ \hline
+    2 (10-2-2025)  & Work on PoA and work on requirements & Handin PoA for review \\ \hline
+    3 (17-2-2025)  & Work on requirements, start research & TBD \\ \hline
+    4 (24-2-2025)  & Research & Handin Requirements document for review \\ \hline
+    4a (3-3-2025)  & Research & TBD \\ \hline
+    5 (10-3-2025)  & Meeting academic supervisor and research & TBD \\ \hline
+    6 (17-3-2025) & Report on meeting with academic supervisor and research & \textbf{Go/No Go from academic supervisor based on PoA} \\ \hline
+    7 (24-3-2025) & Start design and small parts of product & TBD \\ \hline
+    8 (31-3-2025) & Work on design and developing small parts of product & TBD \\ \hline
+    9 (7-4-2025)  & Work on design and developing small parts of product & TBD \\ \hline
+    10 (14-4-2025) & Work on design and developing small parts of product & First version of design done and plan second meeting with academic supervisor \\ \hline
+    11 (21-4-2025) & Start fabricating product & TBD \\ \hline
+    11a (28-4-2025) & Fabricating product & TBD \\ \hline
+    12 (5-5-2025) & Fabricating product and start Qualification & \textbf{Interim assesment from company supervisor} \\ \hline
+    13 (12-5-2025) & Fabricating product & TBD \\ \hline
+    14 (19-5-2025) & Fabricating product and finishing first version of Qualification, Research and Design & Handin Research, Design, and Qualification for review \\ \hline
+    15 (26-5-2025) & Work on finishing product & TBD \\ \hline
+    16 (2-6-2025) & Work on finishing product & TBD \\ \hline
+    17 (9-6-2025) & Finish product & \textbf{Final document handin} \\ \hline
+    18 (16-6-2025) & TBD & TBD \\ \hline
+    19 (23-6-2025) & TBD & \textbf{Graduation session} \\ \hline
+    20 (30-6-2025) & TBD & TBD \\ \hline
 \end{longtable}
 \newpage
 
