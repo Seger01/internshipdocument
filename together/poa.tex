@@ -6,9 +6,7 @@
 \usepackage{geometry} % To adjust margins
 \usepackage{tabularx} % For tables that auto-adjust to the page width
 \usepackage{longtable} % For tables across multiple pages
-\usepackage[ backend=biber, style=alphabetic, sorting=ynt
-]{biblatex} 
-\addbibresource{sample.bib}
+\usepackage[backend=biber, style=alphabetic, sorting=ynt]{biblatex} 
 \addbibresource{sample.bib}
 \geometry{a4paper, margin=1in}
 
@@ -81,8 +79,7 @@ Student number: 2171721
     \hline
     Version & Description & Date \\
     \hline
-    1.2 & Adjustments in line with new graduation guide & 21-11-2021 \\
-    1.3 & Adjusted phasing chapter & 26-02-2024 \\
+    0.1 & Setup initial document & 04-02-2025 \\
     \hline
 \end{tabular}
 
@@ -91,8 +88,8 @@ Student number: 2171721
 \tableofcontents
 
 \newpage
-%wouter
-\section{Background}
+
+\section{Project Background (Wouter)}
 
 
 \subsection{Organization}
@@ -106,31 +103,32 @@ development.
 \paragraph{Services Offered} 
 \begin{itemize} 
     \item \textbf{Consultancy:} Topic
-provides expert advice and remote consultancy to enhance clients' development
-teams. 
-\item \textbf{Farm Out:} Engineers from Topic are embedded directly into
-clients' development processes, offering hands-on support. 
-\item \textbf{Projects:} Topic manages in-house projects from design and development
-to production and market introduction. 
-\item \textbf{Products:} They develop and
-produce high-quality System-On-Modules that are scalable in performance and
+        provides expert advice and remote consultancy to enhance clients' development
+        teams. 
+    \item \textbf{Farm Out:} Engineers from Topic are embedded directly into
+        clients' development processes, offering hands-on support. 
+    \item \textbf{Projects:} Topic manages in-house projects from design and development
+        to production and market introduction. 
+    \item \textbf{Products:} They develop and
+        produce high-quality System-On-Modules that are scalable in performance and
 functionality. \end{itemize}
 
 \paragraph{Expertise Areas} 
 \begin{itemize} 
     \item \textbf{Software Development:}
-Topic engineers excel in embedded software, web application software, and cloud
-services. 
-\item \textbf{Board Development:} Specialization in electronic circuit
-development and Printed Circuit Board (PCB) production. 
-\item \textbf{FPGA Development:} Topic is a Xilinx Premium Partner, offering extensive knowledge in
-FPGA development. 
-\item \textbf{Math Modelling AI:} Expertise in math modeling
-facilitates the implementation of algorithms on embedded systems and accelerates
-such algorithms on embedded devices. 
+        Topic engineers excel in embedded software, web application software, and cloud
+        services. 
+    \item \textbf{Board Development:} Specialization in electronic circuit
+        development and Printed Circuit Board (PCB) production. 
+    \item \textbf{FPGA Development:} Topic is a Xilinx Premium Partner, offering extensive knowledge in
+        FPGA development. 
+    \item \textbf{Math Modelling AI:} Expertise in math modeling
+        facilitates the implementation of algorithms on embedded systems and accelerates
+        such algorithms on embedded devices. 
 \end{itemize}
 
-\subsection{Project}\label{project-background}
+\subsection{Project}
+\label{project-background}
 
 %Review: This shouls not include the aim of the project just the background and history
 
@@ -175,27 +173,26 @@ The two primary parties involved in this project are:
 
 \begin{itemize} 
     \item \textbf{Avans Hogeschool:} The educational institution
-providing the internship program. Avans Hogeschool is responsible for overseeing
-the interns' progress, providing educational support, and consulting on academic
-matters. Additionally, an educational consultant from Avans Hogeschool is
-involved to ensure that the internship aligns with the educational requirements
-and the students' learning outcomes. 
-\item \textbf{Topic Embedded Systems:} The
-company providing the internship assignment and the consultancy during the
-project. Topic Embedded Systems is responsible for offering the project topic,
-guidance, and technical consultancy. The company also evaluates the interns'
-progress, providing real-world experience in embedded systems development and
-professional development. 
+        providing the internship program. Avans Hogeschool is responsible for overseeing
+        the interns' progress, providing educational support, and consulting on academic
+        matters. Additionally, an educational consultant from Avans Hogeschool is
+        involved to ensure that the internship aligns with the educational requirements
+        and the students' learning outcomes. 
+    \item \textbf{Topic Embedded Systems:} The
+        company providing the internship assignment and the consultancy during the
+        project. Topic Embedded Systems is responsible for offering the project topic,
+        guidance, and technical consultancy. The company also evaluates the interns'
+        progress, providing real-world experience in embedded systems development and
+        professional development. 
 \end{itemize}
 
 
 
 
 \newpage
-%wouter 
 %TODO: goal should be different for both duo partners
 %TODO: finish this section
-\section{Project Result}
+\section{Project Result (Wouter)}
 
 
 \subsection{Problem Analysis} As described in section \ref{project-background},
@@ -239,8 +236,7 @@ Where the FPGA is used to
 %Review: quite empty
 
 \newpage
-%seger
-\section{Phasing}
+\section{Phasing (Seger)}
 In each phase, a number of activities must be carried out, and each phase will produce results.
 The planning and division of tasks for these activities is further explained in the Planning chapter.
 It is possible that different phases may overlap.
@@ -607,20 +603,118 @@ In this phase, the completed product is tested and validated to ensure that it m
 \end{itemize}
 
 \newpage
-%seger
-\section{Quality}
+
+\section{Quality (Seger)}
+The quality of the project is evaluated based on two key aspects: the Product Quality and the Documentation Quality. These aspects ensure that the final deliverables meet the functional, technical, and stakeholder requirements while adhering to best practices in development and documentation.
+
 \subsection{Product Quality}
+The product quality is assessed based on its functionality, performance, reliability, and adherence to the specified requirements. The following criteria are used to evaluate the quality of the final product:
+
+\begin{itemize}[leftmargin=*, label={}]
+    \item \textbf{Functionality:}
+        \begin{itemize}
+            \item The product must fully implement all "Must-Have" requirements as defined in the requirements specification.
+            \item Optional "Should-Have" and "Could-Have" features should be included if time and resources permit.
+            \item The product should perform as expected under normal operating conditions.
+        \end{itemize}
+    \item \textbf{Performance:}
+        \begin{itemize}
+            \item The system should meet the performance benchmarks defined during the requirements phase, including latency, responsiveness, and throughput.
+            \item Stress tests should confirm that the system can handle specified speeds without failure.
+        \end{itemize}
+    \item \textbf{Reliability:}
+        \begin{itemize}
+            \item The product should operate consistently without crashes or unexpected behavior.
+            \item All critical bugs identified during testing must be resolved before final delivery.
+        \end{itemize}
+    \item \textbf{Maintainability:}
+        \begin{itemize}
+            \item The codebase should be modular, well-documented, and follow best practices for readability and scalability.
+            \item The system architecture should allow for easy updates and extensions.
+        \end{itemize}
+    \item \textbf{User Experience:}
+        \begin{itemize}
+            \item The user interface (if applicable) should be intuitive and easy to use.
+            \item Any user-facing components should provide clear feedback.
+        \end{itemize}
+\end{itemize}
+
 \subsection{Documentation Quality}
+The documentation quality ensures that all aspects of the project are well-documented, enabling future maintenance, knowledge transfer, and stakeholder understanding. The following criteria are used to evaluate the quality of the documentation:
+
+\begin{itemize}[leftmargin=*, label={}]
+    \item \textbf{Completeness:}
+        \begin{itemize}
+            \item All parts of the project (Plan of Attack, Requirements, Research, Design, Product, and Qualification) must be thoroughly documented.
+            \item Documentation should include detailed descriptions of activities, results, and decisions made during each phase.
+        \end{itemize}
+    \item \textbf{Clarity:}
+        \begin{itemize}
+            \item Documentation should be written in clear, concise language, free of ambiguity.
+            \item Technical terms and acronyms should be defined for non-expert readers.
+        \end{itemize}
+    \item \textbf{Organization:}
+        \begin{itemize}
+            \item Documentation should be logically structured, with a table of contents, sections, and subsections for easy navigation.
+            \item Visual aids such as diagrams, flowcharts, and tables should be used to enhance understanding especially for the design document.
+        \end{itemize}
+    \item \textbf{Accuracy:}
+        \begin{itemize}
+            \item All information in the documentation must be accurate and up-to-date.
+            \item Any changes to the project scope, design, or implementation should be reflected in the documentation.
+        \end{itemize}
+    \item \textbf{Version Control:}
+        \begin{itemize}
+            \item Documentation should be version-controlled, with a clear record of changes and updates.
+            \item The latest version of the documentation should be easily accessible to all stakeholders.
+        \end{itemize}
+    \item \textbf{Compliance with Standards:}
+        \begin{itemize}
+            \item Documentation should adhere to the standards and templates provided by Topic Embedded Systems and Avans University.
+            \item Any additional formatting or style guidelines should be followed consistently.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Quality Assurance Measures}
+To ensure that both product and documentation quality meet the required standards, the following measures will be implemented:
+\begin{itemize}[leftmargin=*, label={}]
+    \item \textbf{Peer Review:}
+        \begin{itemize}
+            \item Team members will review each other's work to identify and address issues early in the process.
+        \end{itemize}
+    \item \textbf{Regular Reviews:}
+        \begin{itemize}
+            \item Reviews of the product and documentation will be conducted by the team, supervisors, and stakeholders.
+            \item Feedback from reviews will be incorporated into the final version of the product and documentation.
+        \end{itemize}
+    \item \textbf{Coding Standards:}
+        \begin{itemize}
+            \item Code will be written following best practices and coding standards of Topic.
+        \end{itemize}
+    \item \textbf{Testing and Validation:}
+        \begin{itemize}
+            \item Comprehensive testing (unit, integration, system, and acceptance tests) will be performed to validate the product's functionality and performance.
+            \item Documentation will be reviewed for accuracy and completeness during the qualification phase.
+        \end{itemize}
+    \item \textbf{Version Control:}
+        \begin{itemize}
+            \item All project artifacts, including code, documentation, and design files, will be version-controlled using Git.
+            \item Regular commits and branching strategies will be followed to maintain a clean and organized repository.
+            \item Documentation will be stored in a shared repository accessible to all team members and stakeholders.
+            \item Documentation will be written in Latex for good version control capability and consistency.
+        \end{itemize}
+\end{itemize}
+
+By adhering to these quality criteria and measures, the project will deliver a high-quality product and documentation that meets the expectations of all stakeholders and ensures long-term maintainability and usability.
+
+\newpage
+
+\section{Confidentiality (Wouter)}
 
 
 \newpage
-%wouter
-\section{Confidentiality}
 
-
-\newpage
-%wouter
-\section{Project Organization}
+\section{Project Organization (Wouter)}
 \textbf{Project name}: Steward platform.\\
 \textbf{Project duration}: 20 weeks (03-02-2025 - 04-07-2025)\\
 \textbf{Stakeholders}: Topic Embedded Systems
@@ -674,8 +768,8 @@ den.heuvel@topic.nl}{dirk.van.den.heuvel@topic.nl}
 
 
 \newpage
-%seger
-\section{Planning}
+
+\section{Planning (Seger)}
 Deadlines in \textbf{bold} are mandated by school, all other deadlines are set by the team (and therefore theoretically flexible).
 Unless a specific day and/or time is specified, all deadlines are on friday, 17:00.
 \begin{longtable}{|l|p{0.4\textwidth}|p{0.4\textwidth}|}
@@ -694,43 +788,40 @@ Unless a specific day and/or time is specified, all deadlines are on friday, 17:
     \endlastfoot
 
     1 (3-2-2025)  & Get to know the company, work on PoA and plan first meeting with academic supervisor & TBD \\ \hline
-    2 (10-2-2025)  & Work on PoA and work on requirements & Handin PoA for review \\ \hline
+    2 (10-2-2025)  & Work on PoA and work on requirements & Submit PoA for review \\ \hline
     3 (17-2-2025)  & Work on requirements, start research & TBD \\ \hline
-    4 (24-2-2025)  & Research & Handin Requirements document for review \\ \hline
+    4 (24-2-2025)  & Research & Sumbit Requirements document for review \\ \hline
     4a (3-3-2025)  & Research & TBD \\ \hline
-    5 (10-3-2025)  & Meeting academic supervisor and research & TBD \\ \hline
+    5 (10-3-2025)  & Meeting academic supervisor, research and start Qualification document & TBD \\ \hline
     6 (17-3-2025) & Report on meeting with academic supervisor and research & \textbf{Go/No Go from academic supervisor based on PoA} \\ \hline
     7 (24-3-2025) & Start design and small parts of product & TBD \\ \hline
-    8 (31-3-2025) & Work on design and developing small parts of product & TBD \\ \hline
-    9 (7-4-2025)  & Work on design and developing small parts of product & TBD \\ \hline
+    8 (31-3-2025) - 9 (7-4-2025) & Work on design and developing small parts of product & TBD \\ \hline
     10 (14-4-2025) & Work on design and developing small parts of product & First version of design done and plan second meeting with academic supervisor \\ \hline
     11 (21-4-2025) & Start fabricating product & TBD \\ \hline
     11a (28-4-2025) & Fabricating product & TBD \\ \hline
     12 (5-5-2025) & Fabricating product and start Qualification & \textbf{Interim assesment from company supervisor} \\ \hline
     13 (12-5-2025) & Fabricating product & TBD \\ \hline
-    14 (19-5-2025) & Fabricating product and finishing first version of Qualification, Research and Design & Handin Research, Design, and Qualification for review \\ \hline
-    15 (26-5-2025) & Work on finishing product & TBD \\ \hline
+    14 (19-5-2025) & Fabricating product and finishing first version of Qualification, Research and Design & Submit Research, Design, and Qualification for review \\ \hline
+    15 (26-5-2025) & Work on finishing product and start testing by Qualification document & TBD \\ \hline
     16 (2-6-2025) & Work on finishing product & TBD \\ \hline
-    17 (9-6-2025) & Finish product & \textbf{Final document handin} \\ \hline
+    17 (9-6-2025) & Finish product and do final qualification & \textbf{Final document submission} \\ \hline
     18 (16-6-2025) & TBD & TBD \\ \hline
-    19 (23-6-2025) & TBD & \textbf{Graduation session} \\ \hline
-    20 (30-6-2025) & TBD & TBD \\ \hline
+    19 (23-6-2025) & Create transfer document & \textbf{Graduation session} \\ \hline
+    20 (30-6-2025) & Finish transfer document & Finish transfer document \\ \hline
 \end{longtable}
 \newpage
 
 \newpage
-%wouter
-\section{Project Boundaries}
+\section{Project Boundaries (Wouter)}
 
 
 \newpage
-%wouter
-\section{Costs and Benefits}
+
+\section{Costs and Benefits (Wouter)}
 
 
 \newpage
-%seger
-\section{Risks}
+\section{Risks (Seger)}
 \subsection{Technical Risks}
 \subsection{Project Management Risks}
 \subsection{Measures}
