@@ -1,0 +1,148 @@
+\pdfobjcompresslevel=0 
+% \documentclass[12pt,a4paper,twoside]{article}
+
+%Math functions
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%Including images
+\usepackage{graphicx}
+% \usepackage[dutch]{babel}
+\usepackage{lastpage}
+
+%Source code listings
+\usepackage{listings}
+
+%Clickable links 
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black, citecolor=black}
+
+\usepackage{geometry}
+\usepackage[utf8]{inputenc} %codification of the document
+%to have your images correctly
+
+\usepackage[backend=biber, style=alphabetic, sorting=ynt]{biblatex} 
+\addbibresource{sample.bib}
+
+\usepackage{float}
+%used to fill with Lorem Ipsum text
+
+\usepackage{lipsum}
+%uses courier font in code listing
+
+\usepackage{courier}
+
+%A nicer way to create tables
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+
+
+% Gantt option to have some form of time planning
+\usepackage{pgfgantt}
+
+%Headers on top and below page
+\usepackage{multirow}
+
+%for multirow package
+\usepackage{fancyhdr}
+
+%ability to use .svg images
+\usepackage{svg}
+
+%ablity to make a history index
+\usepackage{vhistory}
+
+% just for generation blind text test.
+\usepackage{blindtext} 	
+
+% to change the page dimensions\textbf{}
+\usepackage{geometry}
+
+% to change a single page to landscape.
+\usepackage{lscape}
+
+% make directory tree views in latex
+\usepackage{dirtree} 
+
+%ability to make a  nomenclature abbreviation list
+\usepackage[intoc]{nomencl} %  for abbreviation list
+
+% Gantt option to have some form of time planning
+\usepackage{pgfgantt}
+
+% for notes in the margin.
+\usepackage{marginnote}
+
+% For better looking item list.....
+\usepackage{mdwlist}
+
+% to have latex commands in your pdf output.
+\usepackage{listings}
+\usepackage{sectsty}
+
+% eps to pdf automatic
+\usepackage{epstopdf}
+%little trick so we can use \doctitle and \docauthor throughout the document
+% enumrate improvements..... to comstumize label and numbering....
+\usepackage{enumitem}
+
+% \usepackage{cite}
+%\usepackage{subcaption}
+%\usepackage{tengwarscript}
+% 
+\usepackage{url}
+
+\makeatletter
+\let\doctitle\@title
+\let\docauthor\@author
+\let\docversion\@version
+\makeatother
+% %use another font  Augie
+% \renewcommand{\familydefault}{\sfdefault}
+% \renewcommand{\familydefault}{\sfdefault}
+
+\geometry{left=2cm, right=2cm, top=2cm, bottom=3.5cm}
+
+%Put page numbers, document title and author in header / footer
+\fancypagestyle{plain}{
+	\fancyhead[L]{\includegraphics[height=16mm]{images/TopicLogo.png}}
+	\fancyhead[C]{\small {Report} \\ \Large {\doctitle}}
+    \fancyhead[R]{\small Report Date : \today \\ Doc Version : \docversion}
+	
+	\fancyfoot[L]{\tiny © Topic Embedded Projects B.V. 2024 \\ QMS template T-MEM.01}
+	\fancyfoot[C]{\small\\ \doctitle.pdf}
+	\fancyfoot[R]{\small Page \thepage\ of \pageref{LastPage} \\ {Confidential}}
+	
+	\renewcommand{\headrulewidth}{0.1 mm} % ad line under header
+	\renewcommand{\footrulewidth}{0.1 mm} % ad line under footer	
+}
+\setlength{\headheight}{51.4pt}
+%use plain page style with fancyheaders
+\pagestyle{plain}
+
+% for merging pdf pages
+\usepackage{pdfpages} % merging pdf files.....
+
+% appendix
+\usepackage[toc,page]{appendix}
+
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{--}
+
+\setcounter{tocdepth}{4}
+
+% Zet paragraaf inspringing op 0
+\setlength{\parindent}{0pt}
+
+\usepackage{listings}
+\usepackage{xcolor} % Optioneel, voor kleur
+
+\lstset{
+	language=Octave,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue},
+	commentstyle=\color{green!60!black},
+	stringstyle=\color{orange},
+	breaklines=true,
+	captionpos=b
+}

@@ -1,22 +1,16 @@
 \documentclass{article}
 
-\usepackage{geometry}
-\usepackage{hyperref}
-\usepackage{enumitem}
-\usepackage{booktabs} % For better looking tables
-\usepackage{geometry} % To adjust margins
-\usepackage{tabularx} % For tables that auto-adjust to the page width
-\usepackage{longtable} % For tables across multiple pages
-\usepackage{float} % For exact placement of figures
-\usepackage{graphicx} % For images
-\usepackage[backend=biber, style=alphabetic, sorting=ynt]{biblatex} 
-\addbibresource{sample.bib}
-
-\geometry{a4paper, margin=1in}
+% Define the version command
+\makeatletter
+\newcommand{\version}[1]{\def\@version{#1}}
+\makeatother
 
 \title{Plan of Attack}
 \author{Seger Sars and Wouter Boerenkamps}
-\date{04-02-2025}
+\date{\today}
+\version{0.1}
+
+\input{document_template.tex}
 
 \begin{document}
 
