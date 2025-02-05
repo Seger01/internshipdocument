@@ -1,18 +1,16 @@
 \documentclass{article}
-\usepackage{geometry}
-\usepackage{hyperref}
-\usepackage{enumitem}
-\usepackage{booktabs} % For better looking tables
-\usepackage{geometry} % To adjust margins
-\usepackage{tabularx} % For tables that auto-adjust to the page width
-\usepackage{longtable} % For tables across multiple pages
-\usepackage[backend=biber, style=alphabetic, sorting=ynt]{biblatex} 
-\addbibresource{sample.bib}
-\geometry{a4paper, margin=1in}
+
+% Define the version command
+\makeatletter
+\newcommand{\version}[1]{\def\@version{#1}}
+\makeatother
 
 \title{Plan of Attack}
 \author{Seger Sars and Wouter Boerenkamps}
-\date{04-02-2025}
+\date{\today}
+\version{0.1}
+
+\input{document_template.tex}
 
 \begin{document}
 
@@ -877,12 +875,161 @@ vhdl 2008
 
 
 \newpage
-\section{Risks (Seger)}
-\subsection{Technical Risks}
-\subsection{Project Management Risks}
-\subsection{Measures}
-This section describes the measures taken to prevent the above risks or the actions to be taken if they occur.
 
+\section{Risks (Seger)}
+Risks are an important consideration when planning a project. In this project, there are two main categories of risks: technical risks and project management risks. This chapter discusses potential risks, their likelihood, their potential impact, and mitigation strategies. Additionally, a risk analysis matrix is provided to help prioritize and manage these risks effectively.
+
+\subsection{Technical Risks}
+Technical risks are associated with the development and implementation of the project. These risks can arise from uncertainties in technology, tools, or integration challenges.
+
+\subsubsection{Project Scope Too Large}
+\begin{itemize}
+    \item \textbf{Description:} The project scope may be too large, leading to delays or incomplete deliverables.
+    \item \textbf{Likelihood:} Medium
+    \item \textbf{Impact:} High
+    \item \textbf{Mitigation:} 
+        \begin{itemize}
+            \item Clearly define and prioritize requirements using the MoSCoW method (Must-Have, Should-Have, Could-Have, Won't-Have).
+            \item Regularly review progress with supervisors to ensure alignment with project goals.
+            \item Break down the project into smaller, manageable tasks with clear milestones.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Devkit Problems}
+\begin{itemize}
+    \item \textbf{Description:} The development kit (devkit) provided by Topic may have hardware or software issues, as it has been used in previous projects.
+    \item \textbf{Likelihood:} Medium
+    \item \textbf{Impact:} High
+    \item \textbf{Mitigation:}
+        \begin{itemize}
+            \item Test the devkit thoroughly at the start of the project to identify any existing issues.
+            \item Maintain regular communication with Topic's technical team for support and troubleshooting.
+            \item Have a backup plan, such as alternative hardware or software solutions, if the devkit becomes unusable.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Integration Complexity}
+\begin{itemize}
+    \item \textbf{Description:} Integrating the camera-based machine vision system with the FPGA and motor control system may be more complex than anticipated.
+    \item \textbf{Likelihood:} High
+    \item \textbf{Impact:} High
+    \item \textbf{Mitigation:}
+        \begin{itemize}
+            \item Conduct thorough research and prototyping early in the project to identify potential integration challenges.
+            \item Use modular design principles to isolate components and simplify integration.
+            \item Allocate additional time in the schedule for integration testing and debugging.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Hardware Breakage}
+\begin{itemize}
+    \item \textbf{Description:} Although the likelihood is low, the failure or breaking of hardware can significantly impact the project, particularly since the team is composed primarily of software engineers with limited hardware expertise.
+    \item \textbf{Likelihood:} Low
+    \item \textbf{Impact:} High
+    \item \textbf{Mitigation:}
+        \begin{itemize}
+            \item Conduct thorough testing and validation of all hardware components during early stages.
+            \item Establish contacts with hardware support services or manufacturers for prompt assistance.
+            \item Keep backup components or alternative solutions available to minimize downtime.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Project Management Risks}
+Project management risks are related to planning, coordination, and execution. These risks can affect the project timeline, resource allocation, and overall success.
+
+\subsubsection{Missed Deadlines}
+\begin{itemize}
+    \item \textbf{Description:} The project may fall behind schedule due to unforeseen challenges or poor time management.
+    \item \textbf{Likelihood:} Medium
+    \item \textbf{Impact:} High
+    \item \textbf{Mitigation:}
+        \begin{itemize}
+            \item Create a detailed project schedule with clear milestones and deadlines.
+            \item Regularly monitor progress and adjust the plan as needed.
+            \item Communicate any delays or issues to supervisors as soon as they arise.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Resource Constraints}
+\begin{itemize}
+    \item \textbf{Description:} Limited access to resources, such as hardware, software, or expertise, may hinder progress.
+    \item \textbf{Likelihood:} Low
+    \item \textbf{Impact:} Medium
+    \item \textbf{Mitigation:}
+        \begin{itemize}
+            \item Identify resource requirements early and ensure they are available before starting the project.
+            \item Maintain open communication with Topic to request additional resources if needed.
+            \item Explore alternative solutions or workarounds if specific resources are unavailable.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Team Coordination Issues}
+\begin{itemize}
+    \item \textbf{Description:} Miscommunication or lack of coordination between team members may lead to inefficiencies or errors.
+    \item \textbf{Likelihood:} Low
+    \item \textbf{Impact:} Medium
+    \item \textbf{Mitigation:}
+        \begin{itemize}
+            \item Establish clear roles and responsibilities for each team member.
+            \item Hold regular team meetings to discuss progress, challenges, and next steps.
+            \item Use collaboration tools (e.g., version control, task management software) to streamline communication and coordination.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Long Term Team Member Unavailability}
+\begin{itemize}
+    \item \textbf{Description:} Extended unavailability of a team member due to work schedule conflicts or sickness can adversely affect project continuity.
+    \item \textbf{Likelihood:} Medium
+    \item \textbf{Impact:} High
+    \item \textbf{Mitigation:}
+        \begin{itemize}
+            \item Implement flexible scheduling and cross-training among team members.
+            \item Develop contingency plans to reassign tasks and responsibilities if a key team member becomes unavailable.
+            \item Maintain comprehensive documentation to ensure knowledge is shared and can be easily transferred.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Risk Analysis Matrix}
+The following table provides a risk analysis matrix to help prioritize risks based on their likelihood and impact. You can add your own risks to this matrix as needed.
+
+\begin{table}[H]
+\centering
+\caption{Risk Analysis Matrix}
+\label{tab:risk_matrix}
+\begin{tabularx}{\textwidth}{|p{0.2\textwidth}|X|c|c|c|}
+    \hline
+    \textbf{Risk} & \textbf{Description} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Priority} \\
+    \hline
+    Integration Complexity & Integrating the camera-based machine vision system with the FPGA and motor control system may be complex. & High & High & High \\
+    \hline
+    Project Scope Too Large & The project scope may be too large, leading to delays or incomplete deliverables. & Medium & High & High \\
+    \hline
+    Devkit Problems & The development kit may have hardware or software issues. & Medium & High & High \\
+    \hline
+    Missed Deadlines & The project may fall behind schedule due to unforeseen challenges or poor time management. & Medium & High & High \\
+    \hline
+    Long Term Team Member Unavailability & Extended absence of team members due to work schedule conflicts or sickness may hinder project progress. & Medium & High & High \\
+    \hline
+    Hardware Breakage & The risk of hardware failure, which could significantly delay progress given the team’s software focus. & Low & High & High \\
+    \hline
+    Resource Constraints & Limited access to resources may hinder progress. & Low & Medium & Medium \\
+    \hline
+    Team Coordination Issues & Miscommunication or lack of coordination between team members may lead to inefficiencies. & Low & Medium & Medium \\
+    \hline
+\end{tabularx}
+\end{table}
+
+\subsection{Risk Mitigation Plan}
+To effectively manage the identified risks, the following mitigation plan will be implemented:
+\begin{itemize}
+    \item \textbf{Regular Monitoring:} Risks will be reviewed and updated regularly during team meetings and progress reviews.
+    \item \textbf{Contingency Planning:} For high-priority risks, contingency plans will be developed and documented.
+    \item \textbf{Communication:} Any new risks or changes to existing risks will be communicated to all stakeholders promptly.
+    \item \textbf{Documentation:} All risks, mitigation strategies, and outcomes will be documented for future reference and continuous improvement.
+\end{itemize}
+% \newline
+\vspace{1em}
+By proactively identifying and addressing risks, the project team can minimize disruptions and ensure successful project delivery.
 
 \newpage
 
