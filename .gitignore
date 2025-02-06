@@ -41,6 +41,7 @@
 *.blg
 *.bcf
 *.run.xml
+*-blx.bib
 
 # Overleaf and other cloud service files
 *.sync/
