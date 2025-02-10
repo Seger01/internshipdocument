@@ -200,13 +200,13 @@ The two primary parties involved in this project are:
 
 \subsection{Problem Analysis} As described in section \ref{project-background},
 the current version of the project is a functional Stewart platform that uses a
-touchpad sensor to determine the ball's position. The system is controlled by an
+touchpad sensor to determine the position of the ball position. The system is controlled by an
 STM32 microcontroller, which utilizes an inverse kinematics lookup table to
 operate the motors via motor drivers.
 
 However, the touchpad sensor introduces significant latency, which negatively
 impacts the system’s responsiveness and performance. This limitation affects the
-accuracy and real-time capabilities of the platform. Topic has researched the
+accuracy and real-time capabilities of the platform. Topic now want to research the
 possibility of replacing the touchpad with a camera-based machine vision system
 to reduce latency and improve tracking precision.
 
@@ -225,19 +225,6 @@ Second, by relying on an external STM32 microcontroller, the project does not ta
 Transitioning to the Topic board would unlock a broader range of hardware and software solutions, enabling more effective strategies to reduce latency and enhance overall platform performance.
 
 
-
-
-To enhance the current setup, this project will
-integrate a previously selected camera to detect the ball's position, speed, and
-direction, improving platform control. Additionally, the existing STM32-based
-implementation is migrated to the Miami Plus ZU9 board. In this new
-configuration, the FPGA will serve as the primary controller for machine vision
-processing and as the interface between the board and the motor controllers.
-
-These functionalities must be integrated and managed by a custom
-Linux distribution, which will combine the various components and enable
-demonstration management via a web interface.
-
 \subsection{Objective}
 
 The goal of this project is to enhance the performance of the Stewart platform by leveraging the advanced hardware capabilities of the Topic Miami Plus ZU9 board. 
@@ -245,6 +232,7 @@ To achieve this, the project is divided into two main objectives, each focusing 
 
 \textbf{Wouter's Objective:} This part of the project focuses on exploring the various hardware options available on the Topic Miami Plus ZU9 board, including the two real-time processors, the embedded Linux environment, and the GPU.  
 The aim is to determine the most effective use of these resources for handling tasks such as acquiring video, determining ball position and speed, the ball movement control program, and overall system coordination.  
+Additionally, this objective includes the design or integration of a user interface to control the system and visualize key data.  
 The goal is to minimize latency while ensuring smooth integration between these processing units.  
 
 
@@ -956,18 +944,18 @@ creating a proof of concept, rather than generating financial profit.
 \subsection{Cost analyses}
 
 \textbf{Personel costs} \\
+
 \begin{itemize}
     \item Two intern salaries (20 weeks): \euro 5000 
-    \item Intern colsultant: %TODO: add costs consultant
+    \item Intern colsultant: \euro 6400 (2 hours per week for 20 weeks)160 per hour so 3200 total.
 \end{itemize}
 \textbf{Hardware} \\ 
 
 \begin{itemize} 
 
     \item Two laptops: \euro 1800
-    \item 2 Miami ZU9 boards: 
-    \item 2 Florida carrier boards:
-    \item Stewart platform:
+    \item 2 Miami devkit : \euro 8000
+    \item Stewart platform: \euro 250
     \item Camera: \euro 60 
 \end{itemize}
 \textbf{Software}\\
@@ -975,6 +963,8 @@ creating a proof of concept, rather than generating financial profit.
 \begin{itemize}
     \item Vivado license: \euro 4395
 \end{itemize}
+This project has an additional budget of €1000 available for purchasing new components or supplementary items. 
+Additional funding may be granted upon approval by Dirk van den Heuvel
 \subsection{Benefits}
 
 This project continues previous intern assignments to enhance knowledge in
