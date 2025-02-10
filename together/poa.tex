@@ -203,19 +203,18 @@ operate the motors via motor drivers.
 
 However, the touchpad sensor introduces significant latency, which negatively
 impacts the system’s responsiveness and performance. This limitation affects the
-accuracy and real-time capabilities of the platform. Topic now want to research the
+accuracy and real-time capabilities of the platform. Topic now wants to research the
 possibility of replacing the touchpad with a camera-based machine vision system
 to reduce latency and improve tracking precision.
 
 Additionally, there is a need to migrate the current demonstration setup from
 the STM32 microcontroller to the Miami Plus ZU9 board. 
-Since the Miami board has more capabilities and hardware options Topic wants to explore explore these options and see which can be used to better the performance of the platform
+Since the Miami board has more capabilities and hardware options Topic wants to explore these options and see which can be used to improve the performance of the platform
 % the project will explore communication options between the CPU and the FPGA,
 % particularly through the built-in DMA module, to optimize data transfer.
 
 \subsection{Problem Definition} 
-%Review: formal english so no contractions like ball's and the entire sentence it is in does not read well because of the large amount of comma's
-%Review2: This entire subsection does not really include a problem definition, it is more of a continuation of the problem analysis or project ojective
+
 The current project has two main problems that need to be addressed.
 First, the touchpad sensor used to determine the ball's position introduces substantial latency, undermining the system's responsiveness and its ability to operate in real time with the necessary accuracy.
 Second, by relying on an external STM32 microcontroller, the project does not take advantage of the advanced features available on the Topic Miami Plus ZU9 board. 
@@ -242,9 +241,9 @@ Together, these objectives will ensure that each component of the Stewart platfo
 \subsection{Final Result}  
 The final result of this project is a fully functional Stewart platform utilizing the Topic Miami Plus ZU9 board.  
 The chosen architecture will be documented, providing an overview of the selected hardware configurations and communication strategies, along with a justification for these choices based on performance improvements and system requirements.  
-The FPGA will be used to handle motor controle and other critical real-time processes, ensuring minimal latency and efficient system operation.  
+The FPGA will be used to handle motor control and other critical real-time processes, ensuring minimal latency and efficient system operation.  
 The platform will feature a user interface for control, a display to visualize intermediate ball detection steps, and logging functionality to monitor system performance and behavior over time.  
-This implementation will demonstrate the effectiveness of the chosen architecture in improving responsiveness, accuracy, and usability, ultimately creating the Stewart platform demonstation.  
+This implementation will demonstrate the effectiveness of the chosen architecture in improving responsiveness, accuracy, and usability, ultimately creating the Stewart platform demonstration.  
 
 %Review: quite empty
 
